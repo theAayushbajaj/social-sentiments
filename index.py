@@ -9,10 +9,10 @@ import pandas as pd
 import tensorflow
 app = Flask(__name__)
 
-ckey = "2LEQlbO3IkdJ4osG5ZzxHvOAX"
-csecret = "4Vijxfwyak5acGNc6Eowu2BvWZ2VbzH3JoFUURFAd5jaSoIsom"
-atoken = "846386128278208512-K0NeuaqZ3lXz2NOxH6jH9JRsjG42sC2"
-asecret = "4pNF7Eru28tGFaOYISrGkPcTf8ePr0h8s0LTFIh0Fcg0q"
+ckey = ""
+csecret = ""
+atoken = ""
+asecret = ""
 
 auth = OAuthHandler(ckey, csecret)
 auth.set_access_token(atoken, asecret)
@@ -26,7 +26,7 @@ def index():
 @app.route('/main' , methods=['GET'])
 def main():
     keyword = request.args.get('keyword')
-    happy_buffer,sad_buffer,fear_buffer,love_buffer,angry_buffer,happy_phrases,sad_phrases,fear_phrases,love_phrases,angry_phrases,happy_location,sad_location,fear_location,love_location,angry_location,top_keywords = score_texts_emojis_v5.start(r , auth , keyword , 500)         
+    happy_buffer,sad_buffer,fear_buffer,love_buffer,angry_buffer,happy_phrases,sad_phrases,fear_phrases,love_phrases,angry_phrases,happy_location,sad_location,fear_location,love_location,angry_location,top_keywords = score_texts_emojis_v5.start(r , auth , keyword , 500)
     #print("Sad Location : " , sad_location)
     happy_hash,sad_hash,fear_hash,angry_hash,love_hash = hashcode.hash_function(happy_location,sad_location,fear_location,love_location,angry_location)
     #print(sad_hash)
