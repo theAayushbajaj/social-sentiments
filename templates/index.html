@@ -1,0 +1,66 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sentimental Analysis</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/plugins.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/roboto-webfont.css') }}" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" />
+
+    </head>
+    <body>
+        
+
+
+        <!--Home page style-->
+        <header id="home" class="home">
+            <div class="overlay-fluid-block">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="home-wrapper">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="home-content">
+
+                                    <h1>Sentimental Analysis</h1>
+                                    <p>Applying Social Sentimental Analysis on Twitter!!</p>
+				    <p>A project by <strong>Linguistic Pandas</strong></p>
+                                    <div class="row">
+                                        <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12" style="margin-top:-10%;">
+                                            <div class="home-contact">
+                                                <div class="input-group">
+						<form action="main" method="GET" >
+                                                    <input type="text" class="form-control" name="keyword" placeholder="Enter your Keyword!">
+                                                    <input type="submit" class="form-control" value="Proceed">
+												</form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>			
+            </div>
+        </header>
+		
+	
+
+    </body>
+</html>
