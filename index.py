@@ -9,10 +9,10 @@ import pandas as pd
 import tensorflow
 app = Flask(__name__)
 
-ckey = ""
-csecret = ""
-atoken = ""
-asecret = ""
+ckey = "2LEQlbO3IkdJ4osG5ZzxHvOAX"
+csecret = "4Vijxfwyak5acGNc6Eowu2BvWZ2VbzH3JoFUURFAd5jaSoIsom"
+atoken = "846386128278208512-K0NeuaqZ3lXz2NOxH6jH9JRsjG42sC2"
+asecret = "4pNF7Eru28tGFaOYISrGkPcTf8ePr0h8s0LTFIh0Fcg0q"
 
 auth = OAuthHandler(ckey, csecret)
 auth.set_access_token(atoken, asecret)
