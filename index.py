@@ -40,6 +40,3 @@ def main():
     #output = {'happy_buffer':happy_buffer,'sad_buffer':sad_buffer ,'fear_buffer':fear_buffer,'angry_buffer':angry_buffer,'love_buffer':love_buffer, 'keyword' : keyword ,'total_happy':len(happy_buffer),'total_sad':len(sad_buffer),'total_fear':len(fear_buffer),'total_love':len(love_buffer),'total_angry':len(love_buffer), 'top_keywords' : top_keywords}
     #output = json.dumps(output)
     return render_template('main.html' , happy_buffer=happy_buffer,sad_buffer=sad_buffer,fear_buffer=fear_buffer,love_buffer=love_buffer,angry_buffer=angry_buffer, keyword=keyword ,total_happy=len(happy_buffer),total_sad=len(sad_buffer),total_fear=len(fear_buffer),total_love=len(love_buffer),total_angry=len(angry_buffer),happy_phrases=happy_phrases,sad_phrases=sad_phrases,fear_phrases=fear_phrases,love_phrases=love_phrases,angry_phrases=angry_phrases,top_keywords=top_keywords)
-
-if __name__ == '__main__':
-    app.run(threaded=False)
