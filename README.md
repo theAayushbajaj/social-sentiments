@@ -33,3 +33,9 @@ pip install -r requirements.txt
 ```
 python index.py
 ```
+
+### You can find this project live at
+```
+http://social-sentiments.herokuapp.com/
+```
+
