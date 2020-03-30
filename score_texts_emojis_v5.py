@@ -104,7 +104,7 @@ def start(r, auth, keyword, max_items):
         para = para + temp
         TEST_SENTENCES.append(temp)
 
-    print('Locatios :', LOCATIONS)
+    #print('Locations :', LOCATIONS)
     r.extract_keywords_from_text(para)
     # r.get_ranked_phrases_with_scores()
 

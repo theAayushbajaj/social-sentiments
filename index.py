@@ -6,7 +6,7 @@ import json
 import hashcode
 import pandas as pd
 
-import tensorflow
+
 app = Flask(__name__)
 
 ckey = "2LEQlbO3IkdJ4osG5ZzxHvOAX"
@@ -26,7 +26,7 @@ def index():
 @app.route('/main' , methods=['GET'])
 def main():
     keyword = request.args.get('keyword')
-    happy_buffer,sad_buffer,fear_buffer,love_buffer,angry_buffer,happy_phrases,sad_phrases,fear_phrases,love_phrases,angry_phrases,happy_location,sad_location,fear_location,love_location,angry_location,top_keywords = score_texts_emojis_v5.start(r , auth , keyword , 500)
+    happy_buffer,sad_buffer,fear_buffer,love_buffer,angry_buffer,happy_phrases,sad_phrases,fear_phrases,love_phrases,angry_phrases,happy_location,sad_location,fear_location,love_location,angry_location,top_keywords = score_texts_emojis_v5.start(r , auth , keyword , 500)         
     #print("Sad Location : " , sad_location)
     happy_hash,sad_hash,fear_hash,angry_hash,love_hash = hashcode.hash_function(happy_location,sad_location,fear_location,love_location,angry_location)
     #print(sad_hash)
@@ -40,3 +40,6 @@ def main():
     #output = {'happy_buffer':happy_buffer,'sad_buffer':sad_buffer ,'fear_buffer':fear_buffer,'angry_buffer':angry_buffer,'love_buffer':love_buffer, 'keyword' : keyword ,'total_happy':len(happy_buffer),'total_sad':len(sad_buffer),'total_fear':len(fear_buffer),'total_love':len(love_buffer),'total_angry':len(love_buffer), 'top_keywords' : top_keywords}
     #output = json.dumps(output)
     return render_template('main.html' , happy_buffer=happy_buffer,sad_buffer=sad_buffer,fear_buffer=fear_buffer,love_buffer=love_buffer,angry_buffer=angry_buffer, keyword=keyword ,total_happy=len(happy_buffer),total_sad=len(sad_buffer),total_fear=len(fear_buffer),total_love=len(love_buffer),total_angry=len(angry_buffer),happy_phrases=happy_phrases,sad_phrases=sad_phrases,fear_phrases=fear_phrases,love_phrases=love_phrases,angry_phrases=angry_phrases,top_keywords=top_keywords)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
