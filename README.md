@@ -1,35 +1,23 @@
 # Social Media Sentiment Analysis
 
-This project is web-app that focusses on calculating sentiments and its analysis using various state-of-the-art techniques and visualzing them.
+This web-app focusses on analyzing sentiments and keyphrase extraction on twitter data from tweepy api and generating a report.
 
-## Getting Started
+### Overview
+* [deepmoji/](deepmoji) contains all the underlying code used to calculate sentiment.
+* [templates/](templates) contains the front-end code used for report generation.
+* [model/](model) contains the pretrained model and vocabulary.
+* [index.py](index.py) contains code to fire up the Flask server.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+### Installation
+-  Local Machine Installation 
+```sh
+$ git clone https://github.com/theAayushbajaj/Social-Media-Sentiment-Analysis.git
+$ cd Social-Media-Sentiment-Analysis/
+$ pip install -r requirements.txt
+$ python index.py
 ```
-git clone https://github.com/theAayushbajaj/Social-Media-Sentiment-Analysis.git
-cd Social-Media-Sentiment-Analysis/
-```
-1. Create and activate a virtual environment (1->Windows 2->Linux,MacOS)
-```
-python3 -m venv social-sentiment-analysis
-1- social-sentiment-analysis\Scripts\activate.bat
-2- source social-sentiment-analysis/bin/activate
-```
-
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Installing dependencies
-
-```
-pip install -r requirements.txt
-```
-```
-python index.py
+- Docker Run
+```sh
+$ sudo docker build -t socialsentiments:latest .
+$ docker run --name socialsentiments -v "$(pwd)":/home -p5000:5000 socialsentiments:latest
 ```
