@@ -1,3 +1,0 @@
-sudo docker build -t socialsentiments:latest .
-docker run --name socialsentiments -v "$(pwd)":/home -p5000:5000 socialsentiments:latest
-docker restart socialsentiments
