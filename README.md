@@ -21,3 +21,4 @@ $ python index.py
 $ sudo docker build -t socialsentiments:latest .
 $ docker run --name socialsentiments -v "$(pwd)":/home -p5000:5000 socialsentiments:latest
 ```
+- Pulling the image from DockerHub: https://hub.docker.com/repository/docker/theaayushbajaj/social-sentiments
